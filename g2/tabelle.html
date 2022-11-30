@@ -17,6 +17,7 @@
 <body>
     
     <table>
+        <caption>Utenti registrati</caption><!--intitolo la tabella, per capire quali sono i dati trattati-->
         <thead>
             <tr>
                 <th>Nome</th>
@@ -42,6 +43,24 @@
                 <td>2</td>
             </tr>
         </tfoot>
+    </table>
+
+    <!--gestione spazi occupati dalle td-->
+    <table>
+        <caption>Prova attributi</caption>
+        <tr>
+            <td>1</td>
+            <td rowspan="2">2 - 5</td><!--copre lo spazio di 2 righe-->
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td colspan="2">7</td><!--copre lo spazio di 2 colonne-->
+            <td>8</td>
+        </tr>
     </table>
 
 </body>
