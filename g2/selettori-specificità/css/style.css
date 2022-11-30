@@ -1,0 +1,106 @@
+dul li{/*tutti i li figli di ul*/
+    text-decoration:underline;/*imposto una sottolineatura*/
+}
+
+/*selettori più specifici*/
+/*
+# => id
+. => classe
+*/
+
+#primo-elemento{/*l'elemento con id "primo-elemento"*/
+    color: red;
+}
+
+.colore-giallo{/*l'elemento con la classe colore-giallo*/
+    color: yellow;
+}
+
+.sfondo-nero{/*l'elemento con la classe sfondo-nero*/
+    background-color:blue;/*il conflitto viene vinto dal nero perchè appare dopo*/
+    background-color:black;
+}
+
+
+/*specificità
+
+ogni tag vale 1
+ogni classe/pseudoclasse vale 10
+ogni id vale 100
+style="" vale 1000
+
+*/
+
+.elemento-scuro{/* 10 */
+    background-color:black;
+    color: white;
+}
+
+ol li{/* peso 1 + 1 = 2 */
+    text-transform: lowercase;/*fa ansare il testo in minuscolo*/
+}
+
+ol li{/* peso 1 + 1 = 2 */
+    /*vince questo blocco poichè appare dopo*/
+    text-transform: uppercase;/*l'elemento con la classe colore-giallo*/
+    color: red;
+}
+
+ol li ol li{/* peso 1 + 1 + 1 + 1 = 4 */
+    color: black;
+}
+
+
+
+.div1{/*i figli ereditano il suo stile*/
+    color: red;
+}
+
+div.div1 > div{/*peso 10 + 1 = 11*/
+    color: blueviolet;
+}
+
+/*
+
+il simbolo > viene usato per selezionare solo i figli diretti
+
+
+altre combinazioni
+
+div.div1 => <div class="div1></div>
+posso specificare il tag dell'elemento selezionato poer aumentare la specificità
+in questo caso andrebbe a 1 + 10
+
+*/
+
+table{
+    width: 100%;
+}
+
+tr:first-child{
+    background-color:#ccc
+}
+tr:last-child{
+    background-color:#ccc
+}
+tr:nth-of-type(even){/*le parole chiave odd ed even mi permettono di selezionare rispèettivamente tutte le pari o tutte quelle dispari*/
+    background-color:red
+}
+
+td{
+    border: 1px solid black;
+}
+
+td::first-letter{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+td:after{/*pseudo elemento*/
+    content: " >>"
+}
+
+td:hover{/*pseudo elemento*/
+    background-color:bisque
+}

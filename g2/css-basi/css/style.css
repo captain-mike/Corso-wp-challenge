@@ -1,0 +1,21 @@
+/*
+
+selettore{
+    regole/proprietà:valore;
+    regole/proprietà:valore;
+    regole/proprietà:valore;
+    regole/proprietà:valore;
+    regole/proprietà:valore;
+}
+
+*/
+
+/*
+questo è un
+commento
+*/
+
+div{
+    color:red;
+    background-color:green/*posso evitare di mettere il ; dopo l'ultimo valore*/
+}
