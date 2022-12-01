@@ -10,7 +10,10 @@
 
 div{/*tutti gli elementi div*/
     font-size:40px;
-    background-color:blue;
+   background-color:blue;
+   /* background-color:blue !important;
+   Con !important vincerebbe questo selettore
+   */
 }
 
 #giallo{/*l'elemento con id giallo*/

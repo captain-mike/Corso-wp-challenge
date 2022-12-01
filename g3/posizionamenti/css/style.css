@@ -1,0 +1,122 @@
+/*relative*/
+.campo{
+    height: 40vh;
+    width: 40vh;
+    margin: 30px auto;
+    background-color: aquamarine;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.striscia{
+    background-color:white;
+    border: 1px solid #000;
+    height: 40px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.striscia:nth-of-type(3){
+    position: relative;
+    top: 30px;
+    left: -30px;
+}
+
+/*
+absolute +  relative
+*/
+#absolute{
+    position: relative;
+}
+
+.quadrato{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    text-align: center;
+    line-height: 100px;
+    position: absolute;
+}
+#absolute .quadrato:nth-of-type(1){
+    top : 0;
+    left: 0;
+}
+#absolute .quadrato:nth-of-type(2){
+    top : 0;
+    right: 0;
+}
+#absolute .quadrato:nth-of-type(3){
+    bottom : 0;
+    left: 0;
+}
+#absolute .quadrato:nth-of-type(4){
+    bottom : 0;
+    right: 0;
+}
+
+/*fixed*/
+
+#btt{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 15px;
+    right: 15px;
+    background-color:grey;
+    text-align: center;
+    padding: 15px;
+}
+
+/* sticky */
+
+#sticky{
+    height: 70px;
+    background-color:coral;
+    position: sticky;
+    top: 0;
+}
+
+
+/* z-index */
+
+#absolute-z-index{
+    position: relative;
+}
+
+#absolute-z-index .quadrato:nth-of-type(2){
+    left: 50px;
+    top: 50px;
+    background-color:blue;
+    z-index:6;
+}
+#absolute-z-index .quadrato:nth-of-type(3){
+    left: 100px;
+    top: 100px;
+    background-color:rgb(4, 255, 0);
+    z-index:5;
+}
+#absolute-z-index .quadrato:nth-of-type(4){
+    left: 150px;
+    top: 150px;
+    background-color:rgb(225, 0, 255);
+    z-index:4;
+}
+#absolute-z-index .quadrato:nth-of-type(5){
+    left: 200px;
+    top: 200px;
+    background-color:rgb(234, 255, 0);
+    z-index:3;
+}
+#absolute-z-index .quadrato:nth-of-type(6){
+    left: 250px;
+    top: 250px;
+    background-color:rgb(255, 166, 0);
+    z-index:2;
+}
+#absolute-z-index .quadrato:nth-of-type(7){
+    left: 300px;
+    top: 300px;
+    background-color:rgb(255, 0, 93);
+    z-index:1;
+}
+

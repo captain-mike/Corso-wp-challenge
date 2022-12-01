@@ -1,0 +1,83 @@
+/* font-family */
+@font-face {
+    font-family: FontPersonale;
+    src: url(../web-fonts/After-Christmas.ttf) format('TrueType');
+}
+
+:root{
+    font-size: 20px;
+}
+
+h1{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2{
+    font-family: FontPersonale;
+}
+
+p{
+    font-family: 'Dancing Script', cursive;
+}
+
+.grassetto{
+    font-weight: bold;
+}
+
+
+/*===================
+dimensioni
+*/
+.s1{
+    font-size: 16px;/*assoluto*/
+}
+
+.s2{
+    font-size: 2rem;/*relativo all'elemento root*/
+}
+
+.s3-parent{
+    font-size:35px
+}
+
+.s3{
+    font-size: 1em;/*relativo all'elemento parent*/
+}
+
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 1.8rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+h4{
+    font-size: 1.3rem;
+}
+h5{
+    font-size: 1.1rem;
+}
+h6{
+    font-size: 0.8rem;
+}
+
+/*========================
+Altri stili per i testi
+*/
+
+.paragrafo1{
+    line-height: 1.1rem;
+    letter-spacing: 5px;
+    text-align: center;
+    text-shadow: -3px -2px 1px red, 3px 2px 1px blue;/* x y ampiezza colore*/
+}
+
+/*colori*/
+
+h1{
+    color: #00c;
+}
+h2{
+    color: rgba(255, 0, 0,0.3);
+}
