@@ -1,0 +1,22 @@
+h1, h2{/*specificità 1, 1*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+p + button{/*il primo bottone successivo ad un p*/
+    background-color: red
+}
+
+.div1 ~ h3{/*tutti gli h3 che si trovano dopo un elemento con la classe div1*/
+    color: grey;
+}
+
+
+input:focus{
+    background-color:green;
+}
+
+
+input:checked{/*un campo input "spuntabile" quando viene spuntato*/
+    height: 20px;
+    width: 20px;
+}

@@ -1,0 +1,35 @@
+#rosso{/*l'elemento con id rosso*/
+    color: red;
+    background-color:pink;
+}
+
+.sottolineato{/*tutti gli elementi con la classe selezionato*/
+    text-decoration: underline;
+    background-color:green;
+}
+
+div{/*tutti gli elementi div*/
+    font-size:40px;
+    background-color:blue;
+}
+
+#giallo{/*l'elemento con id giallo*/
+    color: yellow;
+}
+
+/*
+
+tag => 1
+. => 10
+# => 100
+style="" => 1000
+
+*/
+
+div#rosso.sottolineato{/* 1 + 100 + 10*/
+    background-color:cadetblue;
+}
+
+div > span{/*solo span figli di primo livello di div*/
+    color: #fff;
+}
