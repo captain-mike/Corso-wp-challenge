@@ -1,0 +1,13 @@
+#menu{
+    height: 0;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+input:checked + #menu{
+    height: 200px;
+}
+
+#toggle{
+    display: none;/*faccio sparire l'elemento*/
+}

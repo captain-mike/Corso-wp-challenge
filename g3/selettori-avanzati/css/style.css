@@ -36,3 +36,19 @@ input:checked{/*un campo input "spuntabile" quando viene spuntato*/
     background-color:#fff;
     color: #000;
 }
+
+ul li:first-child, ul li:last-child{
+    color: blue;
+}
+
+ul li:nth-of-type(2){
+    text-decoration: line-through;
+}
+
+ul li:nth-of-type(odd){
+    text-decoration: underline;
+}
+
+#ul2 li:not(.no-bg){
+    background-color:red;
+}
