@@ -1,0 +1,10 @@
+:target{
+    color: red;
+    height: 20px;
+}
+
+p{
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}

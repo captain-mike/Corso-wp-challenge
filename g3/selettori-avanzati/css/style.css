@@ -11,12 +11,28 @@ p + button{/*il primo bottone successivo ad un p*/
 }
 
 
-input:focus{
+input:focus{/*quando un campo input viene attivato*/
     background-color:green;
 }
 
+input[type="checkbox"]{/*elementi input di tipo checkbox*/
+    height: 40px;
+    width: 40px;
+}
 
 input:checked{/*un campo input "spuntabile" quando viene spuntato*/
     height: 20px;
     width: 20px;
+}
+
+.tasto{
+    width: 200px;
+    background-color:aqua;
+    color: white;
+    /*transition: background-color 1s, color 2s;*/
+    transition: all 0.3s;
+}
+.tasto:hover{/*quando passo il puntatore su un elemento con la classe tasto*/
+    background-color:#fff;
+    color: #000;
 }
