@@ -51,3 +51,61 @@ background-image
     background-color: #000;
     background-position: center;/*lo sfondo appare centrato rispetto al contenitore*/
 }
+
+
+#box6{
+    background-image: url(../img/css3.png), url(../img/guida-html5-1200x1200.png);
+    background-size: 70px auto, contain;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+/*ultima sezione*/
+
+#box7{
+    height: 100vh;
+    padding: 150px 50px;
+    position: relative;
+}
+
+#box7 .bg{
+    background-image: url(../img/creative-css3-tutorials.webp);
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+h3{
+    font-size:3rem;
+    color:#fff;
+    font-weight:bold;
+    margin-bottom: 50px;
+}
+
+p{
+    line-height: 1.5;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+input{
+    width: 200px;
+    height:40px;
+    border-radius: 5px;
+    display:block;
+    border: none;
+}
+
+button{
+    border-radius: 5px;
+    border: none;
+    background-color:orange;
+    padding: 10px 30px;
+    width: 200px;
+}
