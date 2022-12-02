@@ -30,7 +30,7 @@
     background-color:goldenrod;
 }
 
-#menu li:hover a{/*a figli di un li che ha effetto hover attivo e si trova in un elemento #menu*/
+#menu li:hover > a{/*a figli di un li che ha effetto hover attivo e si trova in un elemento #menu*/
     color:white
 }
 
@@ -38,3 +38,24 @@
     color: brown;
     display: block;
 }
+
+.tendina{
+    position: absolute;
+    overflow: hidden;
+    height: 0;
+    transition: all 0.3s;
+}
+
+#menu .tendina li{
+    height: var(--header-height);
+}
+
+#menu li:hover .tendina{
+    height: 300px;
+}
+
+#menu .tendina li{
+    display: block;
+}
+
+
