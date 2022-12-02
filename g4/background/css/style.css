@@ -1,0 +1,53 @@
+
+.quadrato{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+}
+
+/*
+è una buona idea inserire questo blocco di codice in ogni progetto, per far si che le immagini non escano dai loro contenitori
+img{
+    max-width: 100%;
+}*/
+
+
+#box img{
+    max-width: 100%;
+}
+
+#box2{
+    overflow: hidden;
+}
+
+#box2 img {
+    margin-left: -261px;
+    margin-top: -296px;
+}
+
+/*=======================
+background-image
+*/
+
+#box3{
+    background-image: url(../img/creative-css3-tutorials.webp);
+    background-size: contain;/*se la mia priorità è quella di mostrare il background, senza tagli*/
+    background-repeat:no-repeat;/*blocco la ripetizione dello sfondo*/
+    background-color: #000;
+    background-position: center;/*lo sfondo appare centrato rispetto al contenitore*/
+}
+
+#box4{
+    background-image: url(../img/creative-css3-tutorials.webp);
+    background-size: cover;/*se la mia priorità è quella di tappezzare il contenitore, senza lasciare punti scoperti ed a costo di tagliare lo sfondo*/
+    background-repeat:no-repeat;/*blocco la ripetizione dello sfondo*/
+    background-color: #000;
+    background-position: center;/*lo sfondo appare centrato rispetto al contenitore*/
+}
+
+#box5{
+    background-image: url(../img/css3.png);
+    background-size: 100px auto;
+    background-color: #000;
+    background-position: center;/*lo sfondo appare centrato rispetto al contenitore*/
+}
