@@ -1,0 +1,67 @@
+#view{
+    perspective: 1400px;
+    transform-style: preserve-3d;
+    height: 100vh;
+}
+
+#cubo{
+    position:relative;
+    left: 150px;
+    top: 300px;
+    width: 150px;
+    height: 150px;
+    perspective:5500px;
+    transform-style: preserve-3d;
+
+    animation-name: muovi;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes muovi{
+    0%{left: 50px;top: 50px;}
+    25%{left: 1600px; top: 50px;}
+    50%{left: 1600px; top: 700px;}
+    75%{left: 1300px; top: 900px;}
+    100%{left: 50px;top: 50px;}
+}
+
+.faccia{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position: absolute;
+}
+
+#front{
+    transform: translateZ(150px);
+}
+
+#retro{
+    background-color:rgb(68 4 4);
+}
+
+#sx{
+    left: -150px;
+    transform: rotateY(90deg);
+    transform-origin: right;
+    background-image: linear-gradient(to left, rgb(82, 0, 0),red);
+}
+#dx{
+    right: -150px;
+    transform: rotateY(-90deg);
+    transform-origin: left;
+    background-image: linear-gradient(to right, rgb(82, 0, 0),red);
+}
+#top{
+    top: -150px;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    background-image: linear-gradient(to top, rgb(82, 0, 0),red);
+}
+#bottom{
+    bottom: -150px;
+    transform: rotateX(90deg);
+    transform-origin: top;
+    background-image: linear-gradient(rgb(82, 0, 0),red);
+}
