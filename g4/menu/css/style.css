@@ -1,0 +1,40 @@
+:root{
+    --header-height: 70px;
+}
+
+#main-header{
+    background-color: bisque;
+    height: var(--header-height);
+}
+
+#main-header nav, #menu, #menu li{
+    height: 100%;
+}
+
+
+#menu{
+    list-style: none;/*tolgo i pallini dalla lista*/
+    padding-left: 0;
+    text-align: center;
+}
+
+#menu li{
+    display: inline-block;/*si comporta come testo, ma può essere ridimensionato come un blocco*/
+    line-height: var(--header-height);
+    width: 120px;
+    background-color: burlywood;
+    margin-left: -0.3rem;
+}
+
+#menu li:hover{
+    background-color:goldenrod;
+}
+
+#menu li:hover a{/*a figli di un li che ha effetto hover attivo e si trova in un elemento #menu*/
+    color:white
+}
+
+#menu li a{
+    color: brown;
+    display: block;
+}
