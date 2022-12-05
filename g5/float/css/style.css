@@ -1,0 +1,25 @@
+#blog{
+    background-color: red;
+}
+
+
+.blocco{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+.clearfix{
+    clear:both;
+}
+
+.float-img{
+    float:left;
+    padding-right:15px;
+    padding-bottom:5px;
+}
+
+.div-test{
+    background-color:blue;
+}
