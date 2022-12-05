@@ -14,18 +14,41 @@
     margin: 10px 0;
 }
 
+/*sidebar*/
+
+aside > div{
+    height: 100px;
+    padding: 20px;
+    text-align: center;
+    background-color: #808080;
+    margin: 5px;
+}
+
+
+
+#btt{
+    width: 50px;
+    height: 50px;
+    background-color: bisque;
+    position:fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+.desktop-only{
+    display: none;
+}
+
 @media screen and (min-width: 481px){
 
-    /*
+    
     .container{
         display: flex;
+        flex-wrap: wrap;
     }
 
     .colonna{
-        flex: 1 0 auto;
-        flex-wrap: wrap;
-    }*/
-    .colonna{
+        flex-basis: calc(100% / 2);
         background-color:rgb(25, 0, 255);
     }
 
@@ -35,23 +58,61 @@
 @media screen and (min-width: 769px){
 
     .colonna{
+        flex-basis: calc(100% / 3);
         background-color:rgb(17, 255, 0);
+    }
+
+    aside{
+        display: flex;
+    }
+    aside > div{
+        height: 200px;
+    }
+
+}
+
+@media screen and (min-width: 1025px){
+
+   .container{
+        width: 601px;
+        margin: 0 auto;
+   }
+
+    .colonna{
+        background-color:rgb(0, 4, 56);
+    }
+
+    .desktop-only{
+        display: block;
     }
 
 }
 
 @media screen and (min-width: 1281px){
 
+    .flex-content{
+        display:flex   
+    }
+    aside{
+        flex-direction: column;
+    }
+    .container{
+        width: 1170px;
+    }
+
     .colonna{
+        flex-basis: calc(100% / 4);
         background-color:rgb(0, 4, 56);
+        color: #fff;
     }
 
 }
 
-@media screen and (min-width: 1441px){
-
-    .colonna{
-        background-color:rgb(56, 0, 0);
+@media print{
+    body{
+        font-size: 1.5rem;
     }
-
+    #main-header, #main-footer{
+        display:none;
+    }
 }
