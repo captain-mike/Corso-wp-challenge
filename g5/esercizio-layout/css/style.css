@@ -1,0 +1,167 @@
+
+/******************
+stili generali
+*/
+
+:root{
+    --main-font: 'Lato', sans-serif;
+    --title-font: 'Architects Daughter', cursive;
+    --theme-brown: #705042;
+    --theme-green: #6C9F29;
+    --theme-grey: #909090;
+    --theme-orange: #ED5F25;
+    font-size: 20px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+    line-height:1.3rem;
+    font-weight: 400;
+    color: var(--theme-brown);
+    text-align: justify;
+    font-family: var(--main-font)
+}
+
+a{
+    text-decoration: none;
+    font-size: 0.8rem;
+    line-height:1.3rem;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--title-font);
+}
+
+h2{
+    font-size: 2rem;
+}
+
+
+img{
+    max-height: 100%;
+}
+
+.container{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.padding-top-5{
+    padding-top:5rem
+}
+
+/* buttons */
+
+button, a.button{
+    font-size: 0.8rem;
+    padding: 7px 15px;
+    padding-top: 9px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+}
+
+.orange-button{
+    background-color: var(--theme-orange);
+}
+.brown-button{
+    background-color: var(--theme-brown);
+}
+
+.right-arrow{
+    position: relative;
+    padding-right:38px
+}
+
+.right-arrow::after {
+    content: "";
+    width: 30px;
+    height: 35px;
+    background-image: url(../img/arrow_right_button.svg);
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: -1px;
+    right: 3px;
+}
+
+
+
+/******************
+header
+*/
+
+#main-header{
+    height: 75px;
+    padding: 15px 0;
+}
+
+.main-logo{
+    height: 45px;
+}
+
+#main-header .container{
+    display: flex;
+}
+
+.main-nav {
+    display: inline-block;
+    margin-left: auto;
+}
+
+
+#menu-toggle{
+    background-image: url(../img/burger_menu.svg);
+    background-size: contain;
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+/******************
+Home
+*/
+
+#hero-image{
+    height: 300px;
+    background-image: url(https://picsum.photos/600/300);
+    padding-top: 15%;
+}
+
+#hero-image h1{
+    width: 50%;
+    margin-left: 50px;
+    color: #fff;
+}
+
+.chi-siamo-logo-area img {
+    vertical-align: middle;
+}
+
+.big-logo{
+    height: 150px;
+}
+
+/******************
+Pages
+*/
+
+.section-title{
+    text-align: center;
+    color: var(--theme-green);
+    margin-bottom: 3rem
+}
+
+
+/******************
+Footer
+*/
