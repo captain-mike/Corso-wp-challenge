@@ -1,0 +1,57 @@
+#main-header, #main-footer{
+    height: 300px;
+    background-color: yellow
+}
+
+.container{
+    background-color: aquamarine;
+}
+
+
+.colonna{
+    height: 300px;
+    background-color:red;
+    margin: 10px 0;
+}
+
+@media screen and (min-width: 481px){
+
+    /*
+    .container{
+        display: flex;
+    }
+
+    .colonna{
+        flex: 1 0 auto;
+        flex-wrap: wrap;
+    }*/
+    .colonna{
+        background-color:rgb(25, 0, 255);
+    }
+
+}
+
+
+@media screen and (min-width: 769px){
+
+    .colonna{
+        background-color:rgb(17, 255, 0);
+    }
+
+}
+
+@media screen and (min-width: 1281px){
+
+    .colonna{
+        background-color:rgb(0, 4, 56);
+    }
+
+}
+
+@media screen and (min-width: 1441px){
+
+    .colonna{
+        background-color:rgb(56, 0, 0);
+    }
+
+}

@@ -1,0 +1,31 @@
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+.container-small{
+    width: 800px;
+    margin: 0 auto;
+}
+.container-xl{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.grid{
+    margin-bottom: 30px;
+}
+
+.fullwidth-bg{
+    background-color: aquamarine;
+}
+
+.colonna{
+    height:100px;
+    width: calc(100% / 3 - 2px);
+    background-color: coral;
+    display: inline-block;
+    margin-left:-0.3rem;
+    margin-bottom:-0.3rem;
+    border: 1px solid #000;
+}
+
