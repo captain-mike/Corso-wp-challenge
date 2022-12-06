@@ -166,4 +166,11 @@ allinamenti.html
     order: 2;
 }
 
+section div{
+    flex-grow:0;
+    flex-shrink: 1;
+    flex-basis: 50%;
+    flex: 0 1 50%;/*sintassi contratta*/
+}
+
 
