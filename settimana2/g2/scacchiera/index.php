@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +8,8 @@
     <style>
 
         #scacchiera{
-            width: 100vw;
-            height: 100vw;
+            width: 50vw;
+            height: 50vw;
             border: 1px solid #000;
         }
 
@@ -35,11 +36,11 @@
 
         <?php
 
-        $blocchi = 8;
 
         for ($i = 1; $i < 9; $i++){
             for ($y = 1; $y < 9; $y++){
 
+                /* versione estesa
                 $pari = ($i + $y) % 2 == 0;
                 
                 if($pari){
@@ -47,7 +48,11 @@
                 }else{
                     echo "<div class=\"quadretto chiaro\">i = $i - Y = $y</div>";
                 }
+                */
 
+                //operatore ternario
+                $colore = ($i + $y) % 2 == 0 ? 'scuro' : 'chiaro';
+                echo "<div class=\"quadretto $colore\">i = $i - Y = $y</div>";
                 
             }
         }
