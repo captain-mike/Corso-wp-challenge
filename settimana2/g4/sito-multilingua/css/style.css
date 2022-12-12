@@ -1,0 +1,25 @@
+#main-header, #main-footer{
+    height: 250px;
+    background-color: yellow;
+}
+
+h1{
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+#menu{
+    display: flex;
+    align-items: center;
+}
+#menu a{
+    display: block;
+    height: 50px;
+    width:100px;
+    line-height: 50px;
+    text-align: center;
+    background-color:bisque;
+    color: #000;
+    text-decoration: none;
+}
