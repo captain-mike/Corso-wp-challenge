@@ -1,4 +1,17 @@
-<?php include('inc/header.php'); ?>
+<?php 
+include('inc/header.php');
+require_once('inc/connection.php');
+
+$sql = "SELECT * FROM piatti";
+$query = $db->prepare($sql);
+if(!$query->execute()){
+    print_r($query->errorInfo());
+    die;
+}
+
+$piatti = $query->fetchAll(PDO::FETCH_ASSOC);
+
+?>
 
 <main>
     <h1>Gestione menu</h1>
@@ -16,6 +29,7 @@
                         <caption>Tutte le pizze</caption>
                         <thead>
                             <tr>
+                                <th>#</th>
                                 <th>Gusto</th>
                                 <th>Prezzo</th>
                                 <th>Ingredienti</th>
@@ -23,16 +37,19 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <?php foreach($piatti as $index => $piatto):?>
                             <tr>
-                                <td>Margherita</td>
-                                <td>5</td>
-                                <td>farina, lievito, pomodoro, mozzarella, olio EVO</td>
+                                <td><?=$index + 1?></td>
+                                <td><?=$piatto['gusto']?></td>
+                                <td><?=$piatto['prezzo']?>€</td>
+                                <td><?=$piatto['ingredienti']?></td>
                                 <td>
-                                    <a class="btn btn-warning" href=""><i class="bi bi-pencil-square"></i> Modifica</a>
-                                    <a class="btn btn-danger" href=""><i class="bi bi-trash-fill"></i>
- Elimina</a>
+                                    <a class="btn btn-warning" href="modifica-pizza.php?id=<?=$piatto['id']?>"><i class="bi bi-pencil-square"></i> Modifica</a>
+                                    <a class="btn btn-danger" href="crud/delete.php?id=<?=$piatto['id']?>"><i class="bi bi-trash-fill"></i>
+                                    Elimina</a>
                                 </td>
                             </tr>
+                            <?php endforeach;?>
                         </tbody>
                     </table>
 
