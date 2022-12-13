@@ -1,38 +1,28 @@
-<?php include('inc/header.php'); 
-
-$ingredienti = [
-    'farina',
-    'lievito',
-    'sale',
-    'mozzarella',
-    'pomodoro',
-    'olio-evo',
-    'prosciutto',
-    'funghi'
-    ]
-
+<?php 
+include('inc/header.php');
+require_once('inc/ingredienti.php');
 ?>
 
 <main>
 
     <div class="container">
 
-        <h1>Aggiungi una pizza</h1>
+        <h1 class="mb-5 mt-3">Aggiungi una pizza</h1>
         
         
-        <form>
-            <input type="text" class="form-control" placeholder="gusto" name="gusto">
-            <div class="input-group">
-                <input type="text" name="prezzo" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+        <form method="post" action="crud/create.php">
+            <input type="text" class="form-control mb-2" placeholder="gusto" name="gusto">
+            <div class="input-group mb-2">
+                <input type="number" name="prezzo" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
                 <span class="input-group-text">€</span>
                 <span class="input-group-text">0.00</span>
             </div>
-            <div class="row">
+            <div class="row mb-2">
                 <?php foreach($ingredienti as $ing):?>
                 <div class="col-4">
                     <div class="form-check form-switch">
-                        <input class="form-check-input" name="ingrediente-<?=$ing?>" type="checkbox" role="switch" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault"><?=$ing?></label>
+                        <input class="form-check-input" value="<?=$ing?>" name="ingrediente-<?=$ing?>" type="checkbox" role="switch" id="ingrediente-<?=$ing?>">
+                        <label class="form-check-label" for="ingrediente-<?=$ing?>"><?=$ing?></label>
                     </div>
                 </div>
                 <?php endforeach; ?>
