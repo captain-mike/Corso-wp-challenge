@@ -19,6 +19,8 @@ $piatti = $query->fetchAll(PDO::FETCH_ASSOC);
     <section>
         <div class="container">
 
+            <?php include('inc/messages.php');?>
+
             <div class="row">
                 <div class="col-12 d-grid gap-2">
                     <a href="crea-pizza.php" class="btn btn-success"><i class="bi bi-plus-square-fill"></i> Aggiungi pizza</a>
@@ -44,9 +46,8 @@ $piatti = $query->fetchAll(PDO::FETCH_ASSOC);
                                 <td><?=$piatto['prezzo']?>€</td>
                                 <td><?=$piatto['ingredienti']?></td>
                                 <td>
-                                    <a class="btn btn-warning" href="modifica-pizza.php?id=<?=$piatto['id']?>"><i class="bi bi-pencil-square"></i> Modifica</a>
-                                    <a class="btn btn-danger" href="crud/delete.php?id=<?=$piatto['id']?>"><i class="bi bi-trash-fill"></i>
-                                    Elimina</a>
+                                    <a class="btn btn-warning" href="modifica-pizza.php?id=<?=$piatto['id']?>"><i class="bi bi-pencil-square"></i></a>
+                                    <a class="btn btn-danger" href="crud/delete.php?id=<?=$piatto['id']?>"><i class="bi bi-trash-fill"></i></a>
                                 </td>
                             </tr>
                             <?php endforeach;?>
@@ -54,7 +55,7 @@ $piatti = $query->fetchAll(PDO::FETCH_ASSOC);
                     </table>
 
                 </div> 
-            </div>
+            </div>           
             
         </div>
     </section>

@@ -5,7 +5,7 @@ if(!empty($_POST['gusto']) && !empty($_POST['prezzo'])){
     $prezzo = $_POST['prezzo'];
 }else{
     //se non ci sono rimando indietro l'utente
-    header('Location:http://challenge.test/settimana2/g5/sito/crea-pizza.php');
+    header('Location:http://challenge.test/settimana2/g5/sito/crea-pizza.php?error=Devi compilare i campi obbligatori');
     die;
 }
 
@@ -35,7 +35,7 @@ foreach($_POST as $chiave => $dato){
 
 
 if($query->execute()){
-    header('Location:http://challenge.test/settimana2/g5/sito/gestione-menu.php');
+    header("Location:http://challenge.test/settimana2/g5/sito/gestione-menu.php?success=Piatto $gusto creato");
 }else{
     print_r($query->errorInfo());
 }

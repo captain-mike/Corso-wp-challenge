@@ -8,6 +8,8 @@ include('inc/header.php');
     <div class="container">
 
         <h1 class="mb-5 mt-3">Aggiungi una pizza</h1>
+
+        <?php include('inc/messages.php')?>
         
         <?php include('inc/form-piatto.php')?>
         

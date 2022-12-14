@@ -10,5 +10,10 @@ $ingredienti = [
     'prosciutto',
     'funghi',
     'salame',
-    'origano'
+    'origano',
+    'salsiccia',
+    'taleggio',
+    'emmental',
+    'gorgonzola',
+    'friarielli'
 ];
