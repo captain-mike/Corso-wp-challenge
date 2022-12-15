@@ -47,7 +47,7 @@ $piatti = $query->fetchAll(PDO::FETCH_ASSOC);
                                 <td><?=$piatto['ingredienti']?></td>
                                 <td>
                                     <a class="btn btn-warning" href="modifica-pizza.php?id=<?=$piatto['id']?>"><i class="bi bi-pencil-square"></i></a>
-                                    <a class="btn btn-danger" href="crud/delete.php?id=<?=$piatto['id']?>"><i class="bi bi-trash-fill"></i></a>
+                                    <a class="btn btn-danger btnDelete" href="crud/delete.php?id=<?=$piatto['id']?>"><i class="bi bi-trash-fill"></i></a>
                                 </td>
                             </tr>
                             <?php endforeach;?>
