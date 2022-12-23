@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="test">Ciao</h1>
+
+    <!-- 
+        Secondo il DOM 
+        tutti gli elementi sono numerati
+        il numero assegnato ad ogni elemento
+        dipende dal contesto in cui si trovato
+    -->
+    <div>
+        <span>n°0</span>
+        <span>n°1</span>
+        <span>n°2</span>
+    </div>
+    <div>
+        <span>n°0</span>
+        <span>n°1</span>
+        <span>n°2</span>
+    </div>
+    
+    <script>
+        document.getElementById('test').innerHtml = 'Hello World!';
+
+        /*
+        commento su
+        più righe
+        */
+
+        //commento a riga singola
+    </script>
+</body>
+</html>

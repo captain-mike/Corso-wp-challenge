@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /**
+         * 
+         * Let e const
+         * 
+         */
+
+         //le variabili di tipo let sono soggette a blockscope
+         //se nascono in un blocco, non possono uscirne
+         let a = 0;//è globale
+         
+         {
+            console.log(a);
+            let c = 2;
+            console.log(c);
+         }
+         //console.log(c); errore, esiste solo dentro il blocco appena scritto
+
+         var b = 1;//globale
+         {
+            console.log(b);
+            var d = 3;
+         }
+         console.log(d);//disponibile perchè var ignora il block scope
+
+         //let b//Identifier 'b' has already been declared
+
+         var x = 4;
+         {
+            //se all'interno del blocco nasce una variabile con un nome identico a quello di una variabile globale pre-esistente
+            //allora verrà ignorata l'esistenza della variabile globale
+
+            //console.log(x);Cannot access 'x' before initialization
+            let x = 5;
+            console.log(x);
+         }
+
+         //const
+
+         //const x//Identifier 'x' has already been declared
+
+         const NUMERO_COSTANTE = 0;
+         //numero = 2;// Assignment to constant variable.
+
+         console.log(NUMERO_COSTANTE);
+
+
+         //nel caso delle strutture annidate, i valori interni alla costante possono essere riassegnati
+         const OGGETTO = {
+            nome : 'Mario',
+            cognome : 'Rossi'
+         }
+
+         //Object.freeze(OGGETTO) eventualmente posso evitare che l'assegnamento vada a buon fine con Object.freeze();
+
+         OGGETTO.nome = 'Maria';
+
+         console.log(OGGETTO)
+
+
+    </script>
+</body>
+</html>

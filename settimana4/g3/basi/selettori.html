@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="test">#test</div>
+    <div class="blocco">.blocco</div>
+    <div class="blocco">.blocco</div>
+    <div>tag</div>
+
+    <script>
+
+    {
+
+        let test = document.getElementById("test");//un solo elemento, con id test
+        console.dir(test);
+        test.style.color = 'red';
+        
+        let blocchi = document.getElementsByClassName('blocco')//array 
+        console.log(blocchi)
+        
+        // blocchi[0].style.color = 'blue';
+        // blocchi[1].style.color = 'blue';
+        for(let blocco of blocchi){
+            blocco.style.color = 'blue';
+        }
+        
+        let div = document.getElementsByTagName('div');//array
+        console.log(div)
+        
+    }
+
+    {
+
+        let test = document.querySelector("#test");//un solo elemento,
+        let blocco1 = document.querySelector(".blocco");//solo il primo elemento
+
+        //let test = document.querySelectorAll('#test')//array
+        let blocchi = document.querySelectorAll('.blocco')//array
+
+        blocchi.forEach(function(blocco){
+            blocco.style.color = 'blue';
+        });
+
+    }
+
+    </script>
+</body>
+</html>

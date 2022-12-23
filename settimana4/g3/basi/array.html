@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //let arrayOld =  new Array();
+        let array = [];
+
+        let arrayMisto = [
+            0,
+            'string',
+            true,
+            [],
+            {}
+        ];
+
+        console.log(arrayMisto);
+        console.log(arrayMisto.length);
+
+        //leggo valori di un array
+
+        console.log(arrayMisto[1])
+        
+        
+        //scrivo in un array
+        arrayMisto[1] = 'Hello World';
+        console.log(arrayMisto[1])
+
+
+        let animali = ['Gatto','Cane','Elefante','Giraffa'];
+
+        //aggiungo all'array
+
+        //animali[5] = 'Tigre'; creo un buco 
+        //sconsigliato usare chiavi testuali negli array
+        //in quel caso dovremmo usare gli oggetti       
+        
+        animali.push('Leone');//aggiungo alla fine di un array
+        //dovrei scegliere sempre di aggiunge in fondo
+        animali.unshift('Camaleonte');//aggiungo all'inizio di un array
+
+        console.log(animali);
+        
+        //pop e shift eliminano un elemento e se serve ci danno l'opportunità di salvare il valore rimosso in una variabile
+        let rimosso = animali.pop();//rimuovo l'ultimo elemento
+        animali.shift();//rimuovo il primo elemento
+        console.log(`è stato rimosso l'animale ${rimosso}`);
+        console.log(animali)
+        
+        
+        let indice = 2;
+        let quantità = 1;
+        
+        animali.splice(indice, quantità);
+        console.log(animali)
+
+    </script>
+</body>
+</html>

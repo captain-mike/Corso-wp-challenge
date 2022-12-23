@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="test"></div>
+
+    <script>
+
+        console.log('Messaggio');
+        console.info('Messaggio');
+        console.error('Messaggio');
+
+        let pizza = {
+            gusto : 'Margherita',
+            prezzo : 5,
+            mostraPrezzo : function(){
+                console.log(`Il prezzo della pizza ${this.gusto} è di ${this.prezzo}€`);
+            } 
+        };
+
+        console.table(pizza)
+
+        console.log('%c Messaggio','color:red; font-size:40px; font-weight:bold');
+
+        //scrittura nella pagina html
+
+        document.write('<b>Test</b>');
+
+        document.getElementById('test').innerHTML = 'Hello World!';
+
+        //array ed output
+        let arr = [0,1,2,3,4,5,6,7,8,9];
+        console.log(arr);
+        document.write(arr);
+        //gli array sono convertibili in stringa, ma i valori contenuti in essi devono essere di un formato convertibile in stringa
+
+        //la conversione di un oggetto in stringa non è possibile
+        document.write(pizza);
+
+        //per convertire un oggetto in stringa, si deve trasformare in JSON
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+    {
+
+        let oggettoOld = new Object();//meglio di no
+        let oggetto = {};
+    
+        let pizza = {
+            gusto : 'Margherita',
+            prezzo : 5,
+            mostraPrezzo : function(){
+                console.log(`Il prezzo della pizza ${this.gusto} è di ${this.prezzo}€`);
+            } 
+        };
+        
+        console.log(pizza.gusto);
+        pizza.gusto = 'Diavola';
+        pizza.mostraPrezzo();
+    }
+
+    {
+
+        //costruttore
+        function Pizza(_gusto, _prezzo){
+            this.gusto = _gusto;
+            this.prezzo = _prezzo;
+            this.mostraPrezzo = function(){
+                console.log(`Il prezzo della pizza ${this.gusto} è di ${this.prezzo}€`);
+            }
+        }
+        let margherita = new Pizza('Margherita',5);
+        margherita.mostraPrezzo();
+
+        let diavola = new Pizza('Diavola',1);
+        diavola.mostraPrezzo();
+
+        console.log(margherita, diavola);
+
+        Pizza.prototype.disponibile = true;
+
+    }
+
+    </script>
+</body>
+</html>

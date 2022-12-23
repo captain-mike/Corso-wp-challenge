@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        var a = 0;
+        //il primo carattere delle variabili deve essere una lettera, oppure i simboli _ o $
+        var $a = 0;
+        var _a = 0;
+        //la parola chiave var si usa solo in fase di creazione(inizializzazione) della variabile
+
+        console.log(a);
+
+        var b;
+        console.log(b);//undefined
+
+        //posso riassegnare il valore delle variabili
+        b = 5;
+        console.log(b);
+
+        //hoisting delle variabili
+        console.log(c);
+        //js cerca se la variabile c esiste, se la variabile nasce più in basso il valore restituito sarà undefined, se non esiste avremo un errore
+        var c;
+
+        //notazione camelcase
+        var nomeVariabile;//prima lettera della seconda parola in maiuscolo
+
+        /*
+        Tipi di dato
+
+        Tipizzazione debole
+        */
+
+        var numero = 0;
+        var stringa = 'Hello world!';
+        var booleano = true;//oppure false
+        var array = [];//oppure new Array()
+        var oggetto = {};
+        
+
+        /**
+         *  Stringhe
+        */
+
+        var nome = 'Mario';
+        var saluto = 'Ciao';
+        //+ è l'operatore di concatenamento
+        var frase = saluto + ' ' + nome;
+        console.log(frase);
+
+
+        var html = '<div class="prova">ecco l\'html</div>';
+        var html2 = "<div class=\"prova\">Hello World!</div>";
+
+        var testo = 'Hello World';
+        var classe = 'prova';
+
+        /**
+         * Simbolo Backtick = `
+         * windows => alt + 9 -> alt + 6
+         * mac => option + 9
+         */
+        var html3 = `<div class=\"${classe}\">${testo}</div>`;
+
+
+        /**
+         * Numeri
+         * 
+         * 
+         * operatori
+         * somma +
+         * sottrazione -
+         * divisione /
+         * moltiplicazione *
+         * 
+        */
+
+        var numero1 = 2;
+        var numero2 = 4;
+        var risultato = numero1 + numero2;//6
+
+        console.log(risultato);
+        console.log(numero1 * numero2);
+
+
+        /**
+         * Parkour
+        */
+
+        var n = 2;
+        var s = '2';
+
+        console.log(n + s);// + diventa operatore di concatenamento quindi ho una stringa
+        console.log(n * s);//numero
+        console.log(n * '2a');//NaN
+        console.log('Ba'+ (n * '2a') +'a');//BaNaNa
+
+    </script>
+</body>
+</html>
