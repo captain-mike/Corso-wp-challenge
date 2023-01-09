@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function saluta(){
+            alert('ciao');
+        }
+
+        //saluta();
+
+        function restituisciSaluto(){
+            return 'ciao';
+        }
+
+        let saluto = restituisciSaluto();
+
+
+        //variabili nelle funzioni
+        var b = 1;
+        function test(){
+            var a = 0;
+            //la variabile a ha scope locale
+
+            console.log(b);
+        }
+
+        test();
+        //console.log(a);//funzioni.html:37 Uncaught ReferenceError: a is not defined
+
+        //funzioni freccia
+        let miaFunzione = () => {
+            //eseguo qualcosa
+            return 'restituisco qualcosa';
+        }
+
+
+
+        let restituisciBenvenuto = () => 'Benvenuto sul mio sito';
+
+        console.log( restituisciBenvenuto() );
+
+
+        let moltiplica = n => n * 2;
+
+        console.log( moltiplica(2) )
+        
+        let somma = (a,b) => a + b;
+        console.log( somma(2,5) );
+
+        //spread
+        let sommaPro = (...numeri) => {
+
+            let somma = 0;
+            for(let n of numeri){
+                somma += n;
+            }
+            console.log(somma)
+
+        };
+        sommaPro(2,6,8,12,45)
+
+
+        //spread + funzione freccia + metodi ciclici
+        //2,6,8,12,45
+        let sommaProUltra = (...numeri) => numeri.reduce( (p,c) => p + c );
+        sommaProUltra(2,6,8,12,45);
+
+
+        
+    </script>
+</body>
+</html>

@@ -11,7 +11,7 @@ persone.addEventListener('change', function(){
         let q = ingrediente.getAttribute('data-q');
         let newQ = q * pers;
        
-        ingrediente.innerHTML = newQ;      
+        ingrediente.innerHTML = newQ < 1 ? newQ : Math.ceil(newQ);      
 
     }
 })
