@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blocco{
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div data-colore="red" class="blocco">1</div>
+    <div data-colore="yellow" class="blocco">2</div>
+    <div data-colore="green" class="blocco">3</div>
+    <div data-colore="purple" class="blocco">4</div>
+    <div data-colore="blue" class="blocco">5</div>
+    <div data-colore="pink" class="blocco">6</div>
+
+
+    <script>
+
+        let blocchi = document.querySelectorAll('.blocco');
+
+        for(let blocco of blocchi){
+
+            blocco.addEventListener('click',function(){
+
+                let colore = blocco.getAttribute('data-colore');
+                if(blocco.style.backgroundColor == ''){
+                    blocco.style.backgroundColor = colore;
+                }else{
+                    blocco.style.backgroundColor = '';
+                }
+              
+            })
+            
+        }
+
+
+    </script>
+
+</body>
+</html>
