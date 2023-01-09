@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+
+    <input type="text" class="form-control" id="testo">
+    <button class="btn btn-primary" id="aggiungi">Aggiungi</button>
+
+    <div id="lista"></div>
+    
+    <script>
+
+        let bottone = document.querySelector('#aggiungi');
+
+        let arrayLista = localStorage.getItem('lista') ? JSON.parse(localStorage.getItem('lista')) : [];
+
+        //al caricamento della pagina leggo il localstorage e creo un div per ogni testo salvato
+        for(let prodotto of arrayLista){
+           creaElementoLista(prodotto);
+        }
+
+
+        //al click sul bottone creo un nuovo div
+        bottone.addEventListener('click',function(){
+
+            let testo = document.querySelector('#testo');
+            
+            creaElementoLista(testo.value);
+            salvataggio(testo.value);//salvo in localstorage
+
+        })
+
+        function creaElementoLista(testo){
+            //creazione html
+            let div = document.createElement('div');//<div></div>
+            div.textContent = testo;
+            div.classList.add('alert','alert-danger');
+
+            //rimozione
+            div.addEventListener('click',function(){
+                div.remove()
+                let indice = arrayLista.indexOf(div.textContent);
+                arrayLista.splice(indice,1);
+                salvataggio();
+            })
+
+             //mostra
+            let lista =  document.querySelector('#lista');
+            lista.append(div);
+
+        }
+
+        function salvataggio(testo){
+            //salvataggio
+            if(testo){
+                arrayLista.push(testo)
+            }
+
+            localStorage.setItem('lista',JSON.stringify(arrayLista));
+        }
+
+    </script>
+</body>
+</html>
