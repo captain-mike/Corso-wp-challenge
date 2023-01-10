@@ -1,0 +1,25 @@
+.accordion-section{
+    border: 1px solid #808080;
+    border-bottom: none;
+    color: #808080;
+}
+.accordion-title{
+    font-size:2rem;
+    font-weight: bold;
+    padding: 5px;
+    color: rgb(53, 53, 53);
+    border-bottom: 1px dotted #808080;
+    background-color: bisque;
+}
+
+.accordion-content{
+    height: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: height 0.3s;
+}
+
+.accordion-section.open .accordion-content{
+    height: auto;
+    padding: 15px;
+}

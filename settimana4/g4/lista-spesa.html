@@ -39,15 +39,17 @@
         function creaElementoLista(testo){
             //creazione html
             let div = document.createElement('div');//<div></div>
-            div.textContent = testo;
-            div.classList.add('alert','alert-danger');
+            div.textContent = testo;//<div>insalata</div>
+            div.classList.add('alert','alert-danger');////<div class="alert alert-danger">insalata</div>
 
             //rimozione
             div.addEventListener('click',function(){
-                div.remove()
+                
                 let indice = arrayLista.indexOf(div.textContent);
                 arrayLista.splice(indice,1);
                 salvataggio();
+                
+                div.remove()
             })
 
              //mostra
