@@ -18,7 +18,6 @@
 .accordion-content{
     overflow: hidden;
     box-sizing: border-box;
-    padding: 15px;
 }
 
 .accordion-section.open .accordion-content{
