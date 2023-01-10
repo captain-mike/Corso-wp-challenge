@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+}
+#memory{
+    margin: 0 auto;
+    width: 100vw;
+    background-color: red;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.icon-box{
+    flex: 1 0 100px;
+    height: 120px;
+    margin-bottom: 10px;
+    background-color: #000;
+    font-size: 5rem;
+    text-align: center;
+    line-height: 120px;
+}
+
+.card{
+    opacity: 0;
+}
+.icon-box.selected .card{
+    opacity: 1;
+}

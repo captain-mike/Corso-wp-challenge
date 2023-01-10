@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div id="off-canvas-menu">
+
+        <button class="toggle">Menu</button>
+        <ul>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+        </ul>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+
+            /**
+             * Versione 1: usando una classe
+             $('#off-canvas-menu .toggle').on('click',function(){
+                 
+                 $('#off-canvas-menu').toggleClass('open')
+                 
+             })
+            */
+            $('#off-canvas-menu .toggle').on('click',function(){
+
+
+                $('#off-canvas-menu').toggleClass('active')
+                if($('#off-canvas-menu').hasClass('active')){
+                    //chiude il menu
+                    $('#off-canvas-menu').animate({
+                        right:0
+                    }, 300)
+                    
+                }else{
+                    //apre il menu
+                    $('#off-canvas-menu').animate({
+                        right:-$('#off-canvas-menu').width() + 'px'
+                    }, 300)
+
+                }
+            });
+
+                
+        })
+    </script>
+</body>
+</html>
