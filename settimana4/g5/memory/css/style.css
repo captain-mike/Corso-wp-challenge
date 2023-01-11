@@ -3,7 +3,7 @@
 }
 #memory{
     margin: 0 auto;
-    width: 100vw;
+    width: 600px;
     background-color: red;
     padding: 20px;
     display: flex;
@@ -11,6 +11,12 @@
     column-gap: 10px;
     align-items: flex-start;
     align-content: flex-start;
+    perspective: 400px;
+}
+
+#count, #time{
+    font-size: 3rem;
+    text-align: center;
 }
 
 .icon-box{
@@ -22,10 +28,34 @@
     text-align: center;
     line-height: 120px;
 }
+.icon-box.found{
+    animation-name:rimuovi;
+    animation-duration: 10s;
+    animation-iteration-count: 1;
+    background-color: #fff;
+    animation-fill-mode: forwards;
+}
+@keyframes rimuovi{
+    0%{transform: translateY(0) translateX(0) translateZ(0) rotate(0)}
+    100%{transform: translateY(100vh) translateX(60vw) translateZ(100vh) rotateX(3600deg);}
+}
+
+.icon-box.selected{
+    animation-name:scopri;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    background-color: #fff;
+}
+@keyframes scopri{
+    0%{transform: rotateX(0deg);}
+    100%{transform: rotateX(360deg);}
+}
 
 .card{
     opacity: 0;
+    cursor: pointer;
 }
-.icon-box.selected .card{
+
+.icon-box.selected .card, .icon-box.found .card{
     opacity: 1;
 }
