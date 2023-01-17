@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        fetch('https://www.cantinadellabirra.it/sitemap.xml')
+            .then(res => res.text())
+            .then(res => {
+
+                let div = document.createElement('div');//div
+                div.innerHTML = res;
+
+                let allUrls = Array.from(div.querySelectorAll('url'))
+
+                let products = allUrls.filter((u,i) => {
+
+                    if(i <= 500){
+                        let location = u.querySelector('loc').innerHTML
+                        if (
+                            location.search('blog') == -1
+                            && location.search('selezioni') == -1
+                            && location.search('promozioni') == -1
+                            && location.search('fusti') == -1
+                        ) {
+                            return location
+                        } 
+                    }
+                })
+
+                let pages = products.map(p => {
+                       return p.querySelector('loc').innerHTML
+                })
+
+                let json = { "_id": "birra", "startUrl": pages, "selectors": [{ "id": "nome", "multiple": false, "parentSelectors": ["_root"], "regex": "", "selector": "h1[itemprop='name']", "type": "SelectorText" }, { "id": "foto", "multiple": false, "parentSelectors": ["_root"], "selector": "img#image", "type": "SelectorImage" }, { "id": "nazione", "multiple": false, "parentSelectors": ["_root"], "regex": "", "selector": ".nazione a", "type": "SelectorText" }, { "id": "stile", "multiple": false, "parentSelectors": ["_root"], "regex": "", "selector": ".prod-stile-sx span.testo", "type": "SelectorText" }, { "id": "colore", "multiple": false, "parentSelectors": ["_root"], "regex": "", "selector": ".colore span.testo", "type": "SelectorText" }, { "id": "grado", "multiple": false, "parentSelectors": ["_root"], "regex": "", "selector": ".grado span.testo", "type": "SelectorText" }, { "id": "bicchiere", "multiple": false, "parentSelectors": ["_root"], "regex": "", "selector": ".bicchiere span.testo", "type": "SelectorText" }, { "id": "birrificio", "multiple": false, "parentSelectors": ["_root"], "regex": "", "selector": ".produttore a", "type": "SelectorText" }, { "id": "ricerca", "multiple": false, "parentSelectors": ["_root"], "regex": "", "selector": "td.birra_gusto_ricerca", "type": "SelectorText" }, { "id": "content", "multiple": false, "parentSelectors": ["_root"], "regex": "", "selector": "#product-attribute-specs-table-container", "type": "SelectorHTML" }] }
+
+                console.log(json)
+            })
+
+    </script>
+
+</body>
+
+</html>
